@@ -1,4 +1,4 @@
-# Datastructures_Algos_Practice
+# Datastructures and Algorithms
 Interview prep and practice
 
 Place holder to keep track of practice problems covered
