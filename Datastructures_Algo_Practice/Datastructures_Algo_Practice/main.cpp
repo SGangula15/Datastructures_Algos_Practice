@@ -26,6 +26,7 @@ int fibonacciRecursion(int n);
 int fibonacciOptimised(int n);
 int maxSubArraySumWIndeces(vector<int> array);
 int kadanesMaxSumAlgo(vector<int> arr);
+int majorityElement(vector<int> array);
 
 class Fibber
 {
@@ -83,9 +84,10 @@ int main(int argc, const char* argv[]) {
     
     std::cout<< numeric_limits<int>::max()<<std::endl;
     // insert code here...
-    std::vector<int> vectlist = {1, -2, 2, -4, 3, 5, 7, 1};
+    std::vector<int> vectlist = {1, 2, 2, 2, -3, 2, 2, 1};
     printDuplicatesInArray(vectlist);
     std::cout<<std::endl;
+    std::cout<<"Majoirty element is: "<<majorityElement(vectlist)<< std::endl;
     maxSubArraySumWIndeces(vectlist);
     kadanesMaxSumAlgo(vectlist);
 
@@ -368,4 +370,21 @@ int fibonacciOptimised(int n)
             counter++;
         }
     return n > 1? previousTwo[1] : previousTwo[0];
+}
+
+int majorityElement(vector<int> array){
+    
+    unordered_map<int, int> map;
+    if(array.size()==1){
+        cout<<"Majority element is: "<<array[0]<<endl;
+        return array[0];
+    }
+    
+    if(array.size()>1){
+        for(int i=0; i < array.size(); i++){
+            if(++map[array[i]] > array.size()/2)
+                return array[i];
+        }
+    }
+    return -1;
 }
