@@ -27,6 +27,7 @@ int fibonacciOptimised(int n);
 int maxSubArraySumWIndeces(vector<int> array);
 int kadanesMaxSumAlgo(vector<int> arr);
 int majorityElement(vector<int> array);
+int majorityElementOptimised(vector<int> array);
 
 class Fibber
 {
@@ -84,10 +85,13 @@ int main(int argc, const char* argv[]) {
     
     std::cout<< numeric_limits<int>::max()<<std::endl;
     // insert code here...
-    std::vector<int> vectlist = {1, 2, 2, 2, -3, 2, 2, 1};
+    std::vector<int> vectlist = {1, 2, 2, 2, -3, 2, 2, 1, 5, 6, 8};
     printDuplicatesInArray(vectlist);
     std::cout<<std::endl;
-    std::cout<<"Majoirty element is: "<<majorityElement(vectlist)<< std::endl;
+    int majority = majorityElement(vectlist);
+    std::cout<<"Majoirty element is: "<<majority<< std::endl;
+    int majorityOptimised = majorityElementOptimised(vectlist);
+    std::cout<<"Majoirty(optimised) element is: "<<majorityOptimised<< std::endl;
     maxSubArraySumWIndeces(vectlist);
     kadanesMaxSumAlgo(vectlist);
 
@@ -387,4 +391,25 @@ int majorityElement(vector<int> array){
         }
     }
     return -1;
+}
+
+int majorityElementOptimised(vector<int> array){
+    
+    int currentCandidate = 0;
+    int counter = 0;
+    for(auto element:array){
+        if(counter == 0){
+            currentCandidate = element;
+            counter++;
+        }
+        
+        if(counter > 0){
+            if(element == currentCandidate)
+                counter++;
+            else
+                counter--;
+        }
+    }
+    
+    return currentCandidate;
 }
