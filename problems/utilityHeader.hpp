@@ -34,6 +34,8 @@ int kadanesMaxSumAlgo(vector<int> arr);
 int majorityElement(vector<int> array);
 int majorityElementOptimised(vector<int> array);
 int uniqueElement(string arr);
+bool searchSortedMatrix(vector<vector<int>>& matrix, int target);
+
 vector<int> productOfArrayExceptItself(vector<int>& array);
 
 
