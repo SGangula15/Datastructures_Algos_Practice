@@ -16,6 +16,9 @@ int main(int argc, const char* argv[]) {
     //myfile << "Writing this to a file.\n";
     //myfile.close();
     std::vector<int> vectlist = {1, 2, 2, 2, -3, 2, 2, 1, 5, 6, 8};
+    std::vector<std::vector<int>> vectOfVect{{2}, {3}, {4},
+        {1,2}, {5,6,2,1}, {8}};
+    uniqueElement("Coddiing");
     std::cout << "Hello, World!\n";
     std::cout<< "Numerical limit, max is: "<<numeric_limits<int>::max()<<std::endl;
     // insert code here...

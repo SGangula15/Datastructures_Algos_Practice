@@ -17,6 +17,7 @@
 #include <vector>
 #include <cstdlib>
 #include <functional>
+#include <string>
 #include <unordered_map>
 
 using namespace std;
@@ -32,6 +33,7 @@ int maxSubArraySumWIndeces(vector<int> array);
 int kadanesMaxSumAlgo(vector<int> arr);
 int majorityElement(vector<int> array);
 int majorityElementOptimised(vector<int> array);
+int uniqueElement(string arr);
 vector<int> productOfArrayExceptItself(vector<int>& array);
 
 
