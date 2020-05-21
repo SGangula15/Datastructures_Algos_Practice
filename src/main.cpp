@@ -15,12 +15,13 @@ int main(int argc, const char* argv[]) {
     //myfile.open ("example.txt");
     //myfile << "Writing this to a file.\n";
     //myfile.close();
-    std::vector<int> vectlist = {1, 2, 2, 2, -3, 2, 2, 1, 5, 6, 8};
+    std::vector<int> vectlist = {1, 2, -3, 4, 5, 6, 8};
     std::vector<std::vector<int>> vectOfVect {
                                               {1,   3,  5,  7},
                                               {10, 11, 16, 20},
                                               {23, 30, 34, 50}
                                               };
+    twoSum(vectlist, 7);
     searchSortedMatrix(vectOfVect, 30);
     //uniqueElement("Coddiing");
     std::cout << "Hello, World!\n";
